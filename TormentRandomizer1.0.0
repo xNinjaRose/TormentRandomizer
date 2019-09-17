@@ -1,0 +1,52 @@
+import random as rnd 
+import sys 
+
+stats = {"DEX":9,"CHA":9,"CON":9,"WIS":9,"STR":9,"INT":9}
+
+
+dex = 9
+cha = 9
+con = 9
+wis = 9
+stre = 9
+inte = 9
+
+points_left = 21
+
+while points_left > 0:
+    if points_left > 0:
+        dex2 = rnd.randrange(0,10,1)
+        stats ["DEX"] += dex2
+        points_left = points_left - dex2
+    
+    elif points_left > 0:
+        cha2 = rnd.randrange(0,10,1)
+        stats ["CHA"] += cha2
+        points_left = points_left - cha2
+
+    elif points_left > 0:
+        con2 = rnd.randrange(0,10,1)
+        stats ["CON"] += con2
+        points_left = points_left - con2
+
+    elif points_left > 0:
+        wis2 = rnd.randrange(0,10,1)
+        stats ["wis"] += wis2
+        points_left = points_left - wis2
+
+    if points_left > 0:
+        stre2 = rnd.randrange(0,15,1)
+        stats ["STR"] += stre2
+        points_left = points_left - stre2
+
+    if points_left > 0:
+        inte2 = rnd.randrange(0,10,1)
+        stats ["INT"] += inte2
+        points_left = points_left - inte2
+
+while True:
+	print(stats)
+	x = input("Enter q to quit: ")
+	if x == "q" or x == "Q":
+		sys.exit()
+# print("Your stats will be",stats["dex"],)
